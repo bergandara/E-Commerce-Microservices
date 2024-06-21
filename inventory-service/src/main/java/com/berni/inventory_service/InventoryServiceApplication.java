@@ -20,6 +20,13 @@ public class InventoryServiceApplication {
 			Inventory inventory = new Inventory();
 			inventory.setSkuCode("iphone_13");
 			inventory.setQuantity(100);
-		}
+
+			Inventory inventory1 = new Inventory();
+			inventory1.setSkuCode("iphone_15");
+			inventory1.setQuantity(0);
+
+			inventoryRepository.save(inventory1);
+			inventoryRepository.save(inventory);
+		};
 	}
 }

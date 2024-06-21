@@ -19,6 +19,8 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String orderNumber;
+
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "order_id")
     private List<OrderLineItems> orderLineItemsList;
 }
